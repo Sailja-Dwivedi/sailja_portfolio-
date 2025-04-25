@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shailja Dwivedi | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/shailu.css">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="container">
+  <!-- Left Sidebar -->
+  <div class="sidebar">
+    <a href="https://github.com/"><i class="fab fa-github"></i>github</a>
+    <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin"></i>linkedin</a>
+    <a href="../img/shailjad_resume .pdf .pdf" download><i class="fas fa-download"></i>resume</a>
+    <!-- <a href="#"><i class="fas fa-certificate"></i>certificates</a> -->
+    <a href="javascript:void(0);" id="certificates-link"><i class="fas fa-certificate"></i>certificates</a>
+    <a href="javascript:void(0);" id="work-link"><i class="fas fa-briefcase"></i>My_work</a>
+  </div>
+
+<!-- Modal for Certificates -->
+<div id="certificates-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>My Certificates</h2>
+      <img src="certificate1.jpg" alt="Certificate 1">
+      <img src="certificate2.jpg" alt="Certificate 2">
+      <img src="certificate3.jpg" alt="Certificate 3">
+      <img src="certificate4.jpg" alt="Certificate 4">
+      <p>These are the certificates I have earned for courses in DSA with Java, C and C++, Python, and Web Development.</p>
+    </div>
+  </div>
+  <!-- Center Content -->
+  <div class="center-content">
+    <h1>Sailja Dwivedi</h1>
+    <p>Web Developer</p>
+  </div>
+<!-- Modal for Work Details -->
+<div id="work-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>My Work & Projects</h2>
+      
+      <!-- NTI Section -->
+      <div class="work-item">
+        <div class="work-logo" style="background-image: url('nti-logo.png');"></div> <!-- Logo for NTI -->
+        <h3>NTI Internship</h3>
+        <p>Internship in Web Development and SEO at NTI, where I honed my skills in building responsive websites and optimizing them for search engines.</p>
+        <a href="https://www.nti.com" target="_blank">Visit NTI</a>
+      </div>
+      
+      <!-- ITWORLDHUB Section -->
+      <div class="work-item">
+        <div class="work-logo" style="background-image: url('itworldhub-logo.png');"></div> <!-- Logo for ITWORLDHUB -->
+        <h3>ITWORLDHUB</h3>
+        <p>I am the founder of ITWORLDHUB, a platform offering freelance web development services, coding tutoring, and more, all from the comfort of your home.</p>
+        <a href="https://www.itworldhub.com" target="_blank">Visit ITWORLDHUB</a>
+      </div>
+  
+      <!-- Bhookha Panda Section -->
+      <div class="work-item">
+        <div class="work-logo" style="background-image: url('../img/university_logo-website-01.jpg');"></div> <!-- Logo for Bhookha Panda -->
+        <h3>Bhookha Panda</h3>
+        <p>I am the founder of Bhookha Panda, a service offering tiffin delivery, fast food, and a mart, all accessible through a single web application.</p>
+        <a href="https://www.bhookhapanda.com" target="_blank">Visit Bhookha Panda</a>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Right Sidebar -->
+  <div class="sidebar">
+    <a href="#"><i class="fas fa-home"></i>home</a>
+    <a href="#"><i class="fas fa-id-card"></i>about</a>
+    <a href="#"><i class="fas fa-code"></i>skills</a>
+    <a href="#"><i class="fas fa-layer-group"></i>project</a>
+    <a href="#"><i class="fas fa-envelope"></i>connect me</a>
+  </div>
+</div>
+
+<!-- Bottom Icons -->
+<div class="bottom-icons">
+  <div><i class="fas fa-graduation-cap"></i><br>education</div>
+  <div><i class="fas fa-music"></i><br>hobby</div>
+  <div><i class="fa-solid fa-id-card-clip"></i><br>contact me</div>
+</div>
+<audio id="bg-music" muted>
+    <source src="../img/development-digital-minimal-corporate-technology-ai-219408.mp3" type="audio/mp3">
+ 
+  </audio>
+  
+  <!-- Start Button -->
+  <button id="start-button" class="music-control">
+    <i class="fas fa-volume-mute"></i>
+  </button>
+<!-- Footer -->
+<div class="footer">© 2025 Sailja Dwivedi | All rights reserved</div>
+
+<!-- THREE.JS BACKGROUND SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="../js/shailu.js"></script>
+
+
+</body>
+</html>
