@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Shailja Dwivedi | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../css/shailu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
     <div class="modal-content">
       <span class="close-btn">&times;</span>
       <h2>My Certificates</h2>
-      <img src="certificate1.jpg" alt="Certificate 1">
+      <img src="../img/dsawithjava.jpg" alt="Certificate 1">
       <img src="certificate2.jpg" alt="Certificate 2">
       <img src="certificate3.jpg" alt="Certificate 3">
       <img src="certificate4.jpg" alt="Certificate 4">
@@ -45,27 +45,27 @@
 <div id="work-modal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
-      <h2>My Work & Projects</h2>
+      <h2>My Work </h2>
       
       <!-- NTI Section -->
       <div class="work-item">
-        <div class="work-logo" style="background-image: url('nti-logo.png');"></div> <!-- Logo for NTI -->
+        <div class="work-logo" style="background-image: url('../img/ntilogo.jpg');"></div> <!-- Logo for NTI -->
         <h3>NTI Internship</h3>
         <p>Internship in Web Development and SEO at NTI, where I honed my skills in building responsive websites and optimizing them for search engines.</p>
-        <a href="https://www.nti.com" target="_blank">Visit NTI</a>
+        <a href="https://newtalentinfotech.com/" target="_blank">Visit NTI</a>
       </div>
       
       <!-- ITWORLDHUB Section -->
       <div class="work-item">
-        <div class="work-logo" style="background-image: url('itworldhub-logo.png');"></div> <!-- Logo for ITWORLDHUB -->
+        <div class="work-logo" style="background-image: url('../img/DB.png');"></div> <!-- Logo for ITWORLDHUB -->
         <h3>ITWORLDHUB</h3>
         <p>I am the founder of ITWORLDHUB, a platform offering freelance web development services, coding tutoring, and more, all from the comfort of your home.</p>
-        <a href="https://www.itworldhub.com" target="_blank">Visit ITWORLDHUB</a>
+        <a href="https://www.itworldhub.com/" target="_blank">Visit ITWORLDHUB</a>
       </div>
   
       <!-- Bhookha Panda Section -->
       <div class="work-item">
-        <div class="work-logo" style="background-image: url('../img/university_logo-website-01.jpg');"></div> <!-- Logo for Bhookha Panda -->
+        <div class="work-logo" style="background-image: url('../img/bp.jpg');"></div> <!-- Logo for Bhookha Panda -->
         <h3>Bhookha Panda</h3>
         <p>I am the founder of Bhookha Panda, a service offering tiffin delivery, fast food, and a mart, all accessible through a single web application.</p>
         <a href="https://www.bhookhapanda.com" target="_blank">Visit Bhookha Panda</a>
@@ -77,13 +77,133 @@
   <!-- Right Sidebar -->
   <div class="sidebar">
     <a href="#"><i class="fas fa-home"></i>home</a>
-    <a href="#"><i class="fas fa-id-card"></i>about</a>
-    <a href="#"><i class="fas fa-code"></i>skills</a>
-    <a href="#"><i class="fas fa-layer-group"></i>project</a>
+    <!-- <a href="#"><i class="fas fa-id-card"></i>about</a> -->
+    <a href="javascript:void(0);" id="about-link"><i class="fas fa-id-card"></i>about</a> <!-- Changed ID -->
+    <!-- <a href="#"><i class="fas fa-code"></i>skills</a> -->
+  <a href="javascript:void(0);" id="skills-link"><i class="fas fa-code"></i>skills</a>
+
+    <!-- <a href="#"><i class="fas fa-layer-group"></i>project</a> -->
+     <a href="javascript:void(0);" id="project-link"><i class="fas fa-layer-group"></i>project</a>
     <a href="#"><i class="fas fa-envelope"></i>connect me</a>
   </div>
 </div>
+<!-- About Popup Modal -->
+<div id="aboutModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <img src="../img/my_pic.jpg" alt="Sailja Dwivedi" class="profile-img">
+    <h2>Sailja Dwivedi</h2>
+    <p class="profession">Web Developer</p>
+    <div class="bio">
+      <p>I'm Sailja Dwivedi, a creative and dedicated Web Developer.  
+         I specialize in building beautiful, responsive websites with clean and efficient code.  
+         Passionate about design and technology, I believe in creating digital experiences that leave a lasting impact.  
+         Let's collaborate and bring ideas to life!</p>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/shailja-dwivedi-12a63a2a0/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/"><i class="fab fa-github"></i></a>
+      <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</div>
 
+<!-- Skills Link in Right Sidebar -->
+<!-- <div class="sidebar"> -->
+  <!-- ... other links ... -->
+  <!-- <a href="javascript:void(0);" id="skills-link"><i class="fas fa-code"></i>skills</a> -->
+  <!-- ... other links ... -->
+<!-- </div> -->
+
+<!-- Skills Popup Modal -->
+<div id="skillsModal" class="modal">
+<div class="modal-content">
+  <span class="close-btn">&times;</span>
+  <h2 style="color:black">My Skills</h2>
+  <div class="skills-container">
+    <div class="icon-box" title="HTML"><i class="fab fa-html5"></i></div>
+    <div class="icon-box" title="CSS"><i class="fab fa-css3-alt"></i></div>
+    <div class="icon-box" title="JavaScript"><i class="fab fa-js"></i></div>
+    <div class="icon-box" title="Bootstrap"><i class="fab fa-bootstrap"></i></div>
+    <div class="icon-box" title="Python"><i class="fab fa-python"></i></div>
+    <div class="icon-box" title="DSA with Java"><i class="fab fa-java"></i></div>
+    <div class="icon-box" title="C"><i class="fas fa-code"></i></div>
+    <div class="icon-box" title="C++"><i class="fas fa-laptop-code"></i></div>
+    <div class="icon-box" title="MongoDB"><i class="fas fa-database"></i></div>
+    <div class="icon-box" title="SEO"><i class="fas fa-search"></i></div>
+    <div class="icon-box" title="API Testing"><i class="fas fa-bug"></i></div>
+    <div class="icon-box" title="Canva"><i class="fas fa-paint-brush"></i></div>
+  </div>
+</div>
+</div>
+<!-- Project Popup Modal -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 style="text-align:center;margin-bottom:20px;">My Projects</h2>
+    
+    <div class="project-carousel">
+      <!-- Slides Container -->
+      <div class="slides-container">
+        <!-- Project 1 -->
+        <div class="project-card active">
+          <div class="card-image">
+            <img src="img/portfolio.jpg" alt="My Portfolio">
+          </div>
+          <div class="card-content">
+            <h3>My Portfolio</h3>
+            <p>Modern responsive portfolio showcasing my skills and projects with interactive elements.</p>
+            <a href="#" class="project-btn">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="card-image">
+            <img src="../img/DB.png" alt="ITWorldHub">
+          </div>
+          <div class="card-content">
+            <h3>ITWorldHub.com</h3>
+            <p>Freelance platform offering web development services and coding tutoring.</p>
+            <a href="https://itworldhub.com" class="project-btn">Visit Site <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="card-image">
+            <img src="img/bhookhapanda.jpg" alt="Bhookha Panda">
+          </div>
+          <div class="card-content">
+            <h3>Bhookha Panda</h3>
+            <p>Food delivery service with tiffin subscription and online ordering system.</p>
+            <a href="https://bhookhapanda.com" class="project-btn">Order Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="card-image">
+            <img src="img/mycampus.jpg" alt="My Campus">
+          </div>
+          <div class="card-content">
+            <h3>My Campus</h3>
+            <p>College management system with student portal and attendance tracking.</p>
+            <a href="#" class="project-btn">View Demo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Navigation Dots -->
+      <div class="carousel-nav">
+        <span class="nav-dot active" data-index="0"></span>
+        <span class="nav-dot" data-index="1"></span>
+        <span class="nav-dot" data-index="2"></span>
+        <span class="nav-dot" data-index="3"></span>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Bottom Icons -->
 <div class="bottom-icons">
   <div><i class="fas fa-graduation-cap"></i><br>education</div>
@@ -99,6 +219,7 @@
   <button id="start-button" class="music-control">
     <i class="fas fa-volume-mute"></i>
   </button>
+  
 <!-- Footer -->
 <div class="footer">© 2025 Sailja Dwivedi | All rights reserved</div>
 
