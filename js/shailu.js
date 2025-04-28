@@ -212,6 +212,7 @@ dots.forEach(dot => {
   });
 });
 
+
 // Pause on hover
 const carousel = document.querySelector('.project-carousel');
 carousel.addEventListener('mouseenter', () => clearInterval(slideInterval));
@@ -223,3 +224,95 @@ document.querySelector('#projectModal .close-btn').addEventListener('click', () 
   document.body.style.overflow = 'auto';
   clearInterval(slideInterval);
 });
+
+// Connect Me Form Functionality
+document.getElementById('connect-link').addEventListener('click', function() {
+  document.getElementById('connectModal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+});
+
+// Form Submission
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Get form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+  
+  // Here you would typically send the data to a server
+  // For demo, we'll just show a success message
+  console.log('Form submitted:', { name, email, subject, message });
+  
+  // Show success message
+  const successMsg = document.createElement('div');
+  successMsg.className = 'form-success';
+  successMsg.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent.';
+  this.parentNode.appendChild(successMsg);
+  
+  // Reset form
+  this.reset();
+  
+  // Hide success message after 5 seconds
+  setTimeout(() => {
+    successMsg.style.display = 'none';
+  }, 5000);
+});
+
+// Close modal
+document.querySelector('#connectModal .close-btn').addEventListener('click', function() {
+  document.getElementById('connectModal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+});
+
+// Close when clicking outside
+window.addEventListener('click', function(e) {
+  if (e.target === document.getElementById('connectModal')) {
+    document.getElementById('connectModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+});
+// server.js
+require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+const nodemailer = require('nodemailer');
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.EMAIL_PASSWORD
+  }
+});
+
+app.post('/api/contact', async (req, res) => {
+  try {
+    const { name, email, subject, message } = req.body;
+    
+    await transporter.sendMail({
+      from: email,
+      to: process.env.EMAIL,
+      subject: `New Contact: ${subject}`,
+      html: `
+        <h3>New Message from ${name}</h3>
+        <p>Email: ${email}</p>
+        <p>Message: ${message}</p>
+      `
+    });
+
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Message sending failed' });
+  }
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+

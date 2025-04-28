@@ -400,7 +400,9 @@ canvas#bg {
   margin-bottom: 12px;
   font-size: 1.4rem;
 }
-
+.modal-content {
+  pointer-events: auto;
+}
 .card-content p {
   color: #666;
   line-height: 1.6;
@@ -455,4 +457,73 @@ canvas#bg {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+/* Connect Me Form Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.submit-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.submit-btn:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.submit-btn i {
+  font-size: 14px;
+}
+
+/* Success Message */
+.form-success {
+  text-align: center;
+  color: #4CAF50;
+  margin-top: 20px;
+  font-weight: 500;
+  display: none;
 }
