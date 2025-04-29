@@ -442,14 +442,14 @@ canvas#bg {
   width: 12px;
   height: 12px;
   margin: 0 6px;
-  background: #ddd;
+  background: #000000;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s;
 }
 
 .nav-dot.active {
-  background: #4CAF50;
+  background: #ffffff;
   transform: scale(1.2);
 }
 
